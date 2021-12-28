@@ -27,7 +27,7 @@ public class Main {
                 + kind + "\"" + file.getName() + "\"" + " (" + file.getPath() + ")" + result + '\n');
     }
 
-    public static void CreateDir(String path) {
+    public static void сreateDir(String path) {
         File newdir = new File(path);
         if (newdir.mkdir()) {
             writeLog(newdir, true);
@@ -36,7 +36,7 @@ public class Main {
         }
     }
 
-    public static void CreateFile(String path, String fileName) {
+    public static void сreateFile(String path, String fileName) {
         String log;
         File newFile = new File(path, fileName);
         try {
@@ -53,18 +53,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CreateDir(DEFAULT_FOLDER + "temp");
-        CreateFile(DEFAULT_FOLDER + "temp//", "temp.txt");
-        CreateDir(DEFAULT_FOLDER + "src");
-        CreateDir(DEFAULT_FOLDER + "res");
-        CreateDir(DEFAULT_FOLDER + "savegames");
-        CreateDir(DEFAULT_FOLDER + "src//main");
-        CreateDir(DEFAULT_FOLDER + "src//test");
-        CreateFile(DEFAULT_FOLDER + "src//main//", "Main.java");
-        CreateFile(DEFAULT_FOLDER + "src//main//", "Utils.java");
-        CreateDir(DEFAULT_FOLDER + "res//drawables");
-        CreateDir(DEFAULT_FOLDER + "res//vectors");
-        CreateDir(DEFAULT_FOLDER + "res//icons");
+        сreateDir(DEFAULT_FOLDER + "temp");
+        сreateFile(DEFAULT_FOLDER + "temp//", "temp.txt");
+        сreateDir(DEFAULT_FOLDER + "src");
+        сreateDir(DEFAULT_FOLDER + "res");
+        сreateDir(DEFAULT_FOLDER + "savegames");
+        сreateDir(DEFAULT_FOLDER + "src//main");
+        сreateDir(DEFAULT_FOLDER + "src//test");
+        сreateFile(DEFAULT_FOLDER + "src//main//", "Main.java");
+        сreateFile(DEFAULT_FOLDER + "src//main//", "Utils.java");
+        сreateDir(DEFAULT_FOLDER + "res//drawables");
+        сreateDir(DEFAULT_FOLDER + "res//vectors");
+        сreateDir(DEFAULT_FOLDER + "res//icons");
 
         String puth = DEFAULT_FOLDER + "temp//temp.txt";
         try (FileWriter writer = new FileWriter(puth, true)) {
